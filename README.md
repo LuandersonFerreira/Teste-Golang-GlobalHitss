@@ -1,4 +1,4 @@
-# Case FazPay
+# Case GlobalHitss
 
 > Olá nesse projeto temos como objetivo demonstrar conhecimentos de desenvolvimento em Golang, 
   o sistema consiste em um CRUD de usuários com a implementação de uma fila para inserção de dados no banco de dados.
