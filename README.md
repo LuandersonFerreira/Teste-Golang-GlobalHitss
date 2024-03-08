@@ -28,8 +28,8 @@ make runapi
 ```
 Aqui você já estará com o BackEnd rodando na sua máquina na porta 9000.
 
-## ☕ Documentação do <Sistema>
-[Você pode acessar toda a documentação da API através desse link](https://testev3.postman.co/workspace/My-Workspace~c800ff9d-ea5e-47d3-8797-9c92680eea97/documentation/14355244-79440ed2-2693-4e22-8de1-5a587550340d)
+## ☕ Documentação do sistema<Sistema>
+[Você pode acessar toda a documentação da API através desse link](https://documenter.getpostman.com/view/14355244/2sA2xh2CgE)
 
 ## 🚀 decisões do projeto
 
