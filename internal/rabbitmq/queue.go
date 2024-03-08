@@ -8,7 +8,7 @@ import (
 	"github.com/streadway/amqp"
 )
 
-func ConnectQueue(user models.User) error {
+func ConnectQueue() error {
 	conn, err := amqp.Dial("amqp://guest:guest@localhost:5672")
 	if err != nil {
 		fmt.Println(err)
@@ -39,6 +39,26 @@ func ConnectQueue(user models.User) error {
 	}
 	fmt.Println(q)
 
+	return nil
+}
+
+func SendToQueue(user models.User) error {
+	conn, err := amqp.Dial("amqp://guest:guest@localhost:5672")
+	if err != nil {
+		fmt.Println(err)
+		return err
+	}
+	defer conn.Close()
+
+	fmt.Println("Successfully Connected to our RabbitMQ Instance")
+
+	ch, err := conn.Channel()
+	if err != nil {
+		fmt.Println(err)
+		return err
+	}
+	defer ch.Close()
+
 	jsonBody, err := json.Marshal(user)
 	if err != nil {
 		fmt.Printf("Erro ao codificar JSON: %v", err)
@@ -61,6 +81,5 @@ func ConnectQueue(user models.User) error {
 	}
 
 	fmt.Println("Mensagem enviada com sucesso.")
-
 	return nil
 }

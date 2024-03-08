@@ -11,8 +11,8 @@ func SetRoutes(r *chi.Mux) {
 		w.Write([]byte("hello world"))
 	})
 	r.Post("/", CreateUser)
-	// r.Put("/", UpdateUser)
-	// r.Delete("/", DeleteUser)
-	// r.Get("/list", ListUser)
-	// r.Get("/", GetUser)
+	r.Get("/", GetUser)
+	r.Put("/", UpdateUser)
+	r.Delete("/", DeleteUser)
+	r.Get("/list", ListUser)
 }

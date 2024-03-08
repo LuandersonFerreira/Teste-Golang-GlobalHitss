@@ -5,6 +5,5 @@ create table users (
     contato varchar(255),
     endereco varchar(255),
     nascimento date,
-    cpf varchar(14),
-    created_at timestamp not null default now()
+    cpf varchar(14)
 );

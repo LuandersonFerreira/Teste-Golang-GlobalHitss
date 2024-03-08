@@ -26,6 +26,12 @@ func main() {
 		}
 	}()
 
+	err = rabbitmq.ConnectQueue()
+	if err != nil {
+		fmt.Println(err)
+		panic(err)
+	}
+
 	err = rabbitmq.InitConsumer()
 	if err != nil {
 		fmt.Println(err)

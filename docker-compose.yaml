@@ -15,12 +15,3 @@ services:
       interval: 3s
       timeout: 5s
       retries: 5
-  # api:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "8080:9000"
-  #   depends_on:
-  #     db:
-  #       condition: service_healthy
