@@ -16,6 +16,9 @@ func ListUser(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
+	for i := range users {
+		users[i].Cpf = maskCPF(users[i].Cpf)
+	}
 
 	w.Header().Add("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(users)
